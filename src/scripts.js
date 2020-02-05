@@ -20,17 +20,26 @@
         let a = parseInt((14 - monthNumber) / 12)
         let y = yearNumber - a
         let m = monthNumber + 12 * a - 2
-        let cal2 = (dayNumber + y + parseInt(y/4) - parseInt(y/100) + parseInt(y/400) + parseInt(31*m/12))
         let cal = (dayNumber + y + parseInt(y/4) - parseInt(y/100) + parseInt(y/400) + parseInt(31*m/12)) % 7
-
-
 
         if (this.year.length > 4 || monthNumber > 12 || dayNumber  > 31) {
             return "This is not valid date";
         } else if (this.year[0] === "0" || this.month[0] === "0" || this.day[0] === "0" ){
             return "This is not valid date";
-        } else {
-        } return parseInt(cal) 
+        } else if (cal === 0) {
+            return "Sunday";
+        }  else if (cal === 1) {
+            return "Monday";
+        }  else if (cal === 2) {
+            return "Tuesday";
+        }  else if (cal === 3) {
+            return "Wednesday";
+        }  else if (cal === 4) {
+            return "Thursday";
+        }  else if (cal === 5) {
+            return "Friday";
+        }   else if (cal === 6) {
+            return "Saturday";
+        }
     }    
-
   }
