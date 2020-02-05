@@ -14,7 +14,11 @@ $(document).ready(function(){
 
     let formula = newDayOfWeek.calculateDate();
 
-    $("p").text(formula);
+    console.log (formula)
+
+
+    $("p").text(formula)
+
 
 });
 });
